@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <!-- old -->
+  <!-- Hero -->
+  <!-- 
+  <div class="container-fluid order-${heroOrder}" id="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 my-auto" id="hero-text">
+          <div class="mktoText" id="heroText" mktoName="Hero Text">
+            <p class="lead" style="text-transform: uppercase;">{{my.CON Category}}</p>
+            <h1>{{my.CON Name}}</h1>
+            <p class="lead">{{my.CON Subheader}}</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 align-self-end" id="hero-image-col">
+          <div id="hero-image"><img src="${heroImg}" class="img-fluid"></div>
+        </div>
+      </div>
+    </div>
+  </div>  
+  -->
+  <!-- End of Hero -->
+
+  <!-- new -->
+
+  <!-- Hero -->
+  <div class="HeroWrapper container-fluid order-${heroOrder}">
+    <div class="container"> 
+      <div class="row">
+        <div class="col-12 col-md-6 my-auto">
+          
+          <div class="Hero mktoText" id="mktoHook-hero" mktoName="Hero">
+            <p class="Hero__category lead">{{my.CON Category}}</p>
+            <h1 class="Hero__heading">{{my.CON Name}}</h1>
+            <p class="Hero__subHeading lead">{{my.CON Subheader}}</p>
+          </div>
+
+        </div>
+      </div><!-- /row -->
+    </div><!-- /container -->
+  </div> <!-- End of Hero -->
+  
+</body>
+</html>

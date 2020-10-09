@@ -1,0 +1,86 @@
+// _typography.scss
+
+
+/* 
+
+  Typography
+
+*/
+
+body {
+  font-family: $font-stack;
+  color: map-get($brand-colors, one);
+}
+
+h1 {
+  color: map-get($brand-colors, blue-1);
+  font-family: $font-stack;
+  font-size: 1.7rem; 
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: normal;
+  line-height: 1.2;
+  // respond to tablets upwards
+  @include for-tablet-up {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+  // respond to laptop upwards
+  @include for-laptop-up {
+    font-size: 2.72rem;
+    line-height: 3rem;
+  }
+}
+
+h2 {
+  color: map-get($brand-colors, blue-3);
+  font-family: $font-stack;
+  font-size: 0.8375rem; 
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 0.064375rem;
+  line-height: 1.49;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: map-get($brand-colors, blue-1);
+  font-family: $font-stack;
+  font-size: 1.3rem; 
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: normal;
+  line-height: 1.28;
+}
+
+h4 {
+  color: map-get($brand-colors, blue-1);
+  font-family: $font-stack;
+  font-size: 1.2rem; 
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: normal;
+  line-height: 1.46;
+}
+
+p {
+  color: map-get($brand-colors, blue-2);
+  font-family: $font-stack;
+  font-size: 1.06rem;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 1.65;
+  letter-spacing: normal;
+}
+
+a {
+  color: map-get($brand-colors, two);
+  text-decoration: underline;
+}
+

@@ -1,0 +1,7 @@
+// _mixins.scss
+
+// For Dev
+@mixin border($color) {
+  border: 1px solid $color;
+}
+

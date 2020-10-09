@@ -1,0 +1,38 @@
+// _variables.scss
+
+// brand colors
+$brand-colors: (
+  'one': #0E0E0E,
+  'two': #BB1E10,
+);
+
+// font-stack
+$font-stack: "Rubik", sans-serif;
+
+// border
+$border: solid 4px #f4f6ff;
+
+// border-radius
+$border-radius: 8px;
+
+// the standard max width
+$content-wrapper-max-width: 1600px;
+
+// box-shaddow
+$box-shaddow:
+  0  5px 10px rgba(154,160,185,0.05),
+  0 15px 40px rgba(166,173,201,0.2)
+;
+
+// breakpoints for media queries
+$breakpoints: (
+  'large': 82em, // => 1312px 
+  'medium': 62em, // => 992px
+  'small': 43em, // => 688px
+);
+
+
+
+
+
+

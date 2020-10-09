@@ -1,0 +1,10 @@
+// _resets.scss
+
+// remove any default padding/margin from all elements
+// and include the padding and border in their total width/height
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
