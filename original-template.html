@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="{{my.LP HTML Lang}}">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Marketo Variables -->
+  <meta class="mktoString" id="buttonText" mktoName="Button CTA Text" default="{{my.CON CTA Button}}">
+  <meta class="mktoString" id="heroBgImg" mktoName="Hero BG IMG" allowHtml="true" default="">
+  <meta class="mktoString" id="heroImg" mktoName="Hero IMG" allowHtml="true" default="">
+  <meta class="mktoString" id="heroBgImgOverlay" mktoName="Hero BG IMG Overlay" allowHtml="true" default="linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0)), ">
+  <meta class="mktoString" id="formContainerMarginTop" mktoName="Form Container Margin Top" allowHtml="false" default="-145px">
+  <meta class="mktoBoolean" id="boolean1" mktoName="Hero" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="boolean2" mktoName="Text Form" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="boolean3" mktoName="Privacy Policy Link" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="boolean4" mktoName="Framed Block" default="false" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="boolean5" mktoName="Custom Block" default="false" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoString" id="heroOrder" mktoName="Hero Pos #" default="1"> 
+  <meta class="mktoString" id="textFormOrder" mktoName="Text Form Pos #" default="2"> 
+  <meta class="mktoString" id="framedBlockOrder" mktoName="Framed Block Pos #" default="3"> 
+  <meta class="mktoString" id="customBlockOrder" mktoName="Custom Block Pos #" default="4"> 
+  <meta class="mktoString" id="bodyBgColor" mktoName="Body Background Color" default="#FFFFFF"> 
+  <!-- End of Marketo Variables -->
+
+  <!-- Tokenized Head Meta Tags, just in case {{my.DEV Comment Close}}
+  {{my.DEV Universal Head Meta Tags}}
+  {{my.DEV Folder Head Meta Tags}}
+  {{my.DEV Content Head Meta Tags}}
+  {{my.DEV Comment Open}} / End of Tokenized Head Meta Tags -->
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Production Landing Page CSS -->
+  <link href="{{my.LP CSS}}" rel="stylesheet">
+  <!-- Font Awesome Icons CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Webfont CSS -->
+  <link rel="stylesheet" href="{{my.LP Webfont URL}}">
+
+  <style>
+  /*  Lets Template Control Form Button Text */
+  .mktoForm button[type="submit"]:after {  
+    content: "${buttonText}";  
+  }  
+  .mktoForm button[type="submit"][disabled]:after {    
+    content: "";    
+  } 
+
+  /*  Tokenizes Checkbox text - Here Permissions Text */
+  .mktoCheckboxList input + label:after {
+    content:'{{my.Form Permission Text}}' !important;
+  }
+
+  #hero {
+    background: ${heroBgImgOverlay}url("${heroBgImg}");
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center;
+    background-color: #808080;
+  }
+
+  @media (min-width: 768px) {
+    #form-container {
+      margin-top: ${formContainerMarginTop};
+    }
+  }
+
+  body {
+  background-color: ${bodyBgColor};
+}
+
+  #hero {
+    display:${boolean1};
+  } 
+  #text-form {
+    display:${boolean2};
+  }
+  #privacy-policy {
+    display:${boolean3};
+  }
+  #framed-block {
+    display:${boolean4};
+  } 
+  #custom-block {
+    display:${boolean5};
+  } 
+
+  </style>
+
+  <title>{{my.LP Page Title}}</title>
+
+  <!-- Google Tag Manager Token {{my.DEV Comment Close}}
+  {{my.DEV Folder GTM JS}}
+  {{my.DEV Comment Open}} / End of Google Tag Manager Token-->
+
+    <!-- Tokenized Head CSS, just in case {{my.DEV Comment Close}}
+  {{my.DEV Universal Head CSS}}
+  {{my.DEV Folder Head CSS}}
+  {{my.DEV Content Head CSS}}
+  {{my.DEV Comment Open}} / End of Tokenized Head CSS-->
+
+  <!-- Tokenized Head JS, just in case {{my.DEV Comment Close}}
+  {{my.DEV Universal Head JS}}
+  {{my.DEV Folder Head JS}}
+  {{my.DEV Content Head JS}}
+  {{my.DEV Comment Open}} / End of Tokenized Head JS, just in case -->
+
+</head>
+<body>
+  
+    
+	<!-- Google Tag Manager No Script Token {{my.DEV Comment Close}}
+  
+	{{my.DEV Folder GTM no script}}
+	{{my.DEV Comment Open}} / End of Google Tag Manager No Script Token -->
+
+  <div class="content">
+
+    <!-- Navbar -->
+    <nav class="navbar static-top">
+      <div class="container">
+        <a class="navbar-brand" href="{{my.GEN Main Website URL}}" target="_blank">
+          <img src="{{my.LP Logo Image URL}}" alt="" id="logo-image">
+        </a>
+      </div>
+    </nav> <!-- End of Navbar -->
+
+    <!-- Sections Order (All sections inside this div can be vertically ordered if a variable is created per section and class (including the variable) is appended to sections container-fluid)-->
+    <div class="d-flex flex-wrap"> 
+
+      <!-- Hero -->
+      <div class="container-fluid order-${heroOrder}" id="hero">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6 my-auto" id="hero-text">
+              
+              <div class="mktoText" id="mktoHook-heroText" mktoName="Hero Text">
+                <p class="lead" style="text-transform: uppercase;">{{my.CON Category}}</p>
+                <h1>{{my.CON Name}}</h1>
+                <p class="lead">{{my.CON Subheader}}</p>
+              </div>
+              
+            </div>
+            <div class="col-12 col-md-6 align-self-end" id="hero-image-col">
+              <div id="hero-image"><img src="${heroImg}" class="img-fluid"></div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End of Hero -->
+
+      <!-- Text Form -->
+      <div class="container-fluid order-${textFormOrder}" id="text-form">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-7">
+              <div class="mktoText" id="bodyText1" mktoName="Body Text 1">
+                <h4>{{my.CON Body Header}}</h4>
+                <p>{{my.CON Body Paragraph}}</p>
+              </div>        
+            </div>
+            <div class="col-12 col-md-5">
+              <div id="form-container">
+                <div class="mktoText" id="aboveFormText1" mktoName="Above Form Text 1">
+                  <h4 class="text-center" id="form-header">{{my.CON Form Header}}</h4>
+                  <p class="text-center" id="form-paragraph">{{my.CON Form Paragraph}}</p>
+                </div>  
+                <div class="mktoForm" id="Form1" mktoName="Form 1"></div> 
+                  <div class="mktoText" id="belowFormText1" mktoName="Below Form Text 1">
+                  <div id="privacy-policy">
+                  <p><a href="{{my.LP Privacy Policy URL}}" target="_blank">{{my.LP Privacy Policy Link Text}}</a></p>
+                </div>  
+                </div> 
+              </div>  
+            </div>
+          </div>
+        </div>
+      </div> <!-- End of Text Form -->
+
+      <!-- Framed Block -->
+      <div class="container-fluid order-${framedBlockOrder}" id="framed-block">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="mktoText" id="framedBlockText1" mktoName="Framed Block Text 1">
+                <p class="lead">Thank you for downloading our {{my.CON Category}} {{my.CON Name}}</p>
+                <h1>We have sent you an e-mail with a download link</h1>
+                <p class="lead"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End of Framed Block -->  
+
+      <!-- Custom Block -->
+      <div class="container-fluid order-${customBlockOrder}" id="custom-block">
+        <div class="container">
+          <div class="row">
+            <div class="mktoText" id="customBlockHTML" mktoName="Custom Block HTML">
+              <div class="col-12">
+              <p class="lead">Custom Block Preheader Text</p>
+              <h1>Customer Block Header Text</h1>
+              <p>Customer Block Paragraph Text</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End of Custom Block -->  
+
+    </div> <!-- End of Sections Order -->
+
+  </div>   <!-- End of content -->
+  <footer class="footer">
+    <div class="container">{{my.LP Footer}}
+    </div>
+  </footer>
+  <!-- Marketo Form JavaScript -->
+  <script> 
+  MktoForms2.whenReady(function(form) {  
+
+//Removes any querystring in the URL before logging Latest Form URL
+{{my.LP Latest Form URL Script}}
+
+//Rewrites follow up URL so it uses same domain as form page
+{{my.LP Rewrite follow up URL}}    
+});  
+  </script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Tokenized Foot JS, just in case {{my.DEV Comment Close}}
+  {{my.DEV Universal Foot JS}}
+  {{my.DEV Folder Foot JS}}
+  {{my.DEV Content Foot JS}}
+  {{my.DEV Comment Open}} / End of Tokenized Foot JS, just in case -->
+
+</body>
+</html>
