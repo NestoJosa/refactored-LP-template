@@ -52,7 +52,7 @@
     content:'{{my.Form Permission Text}}' !important;
   }
 
-  #hero {
+  #HeroWrapper {
     background: ${heroBgImgOverlay}url("${heroBgImg}");
     -webkit-background-size: 100% 100%;
     -moz-background-size: 100% 100%;
@@ -71,9 +71,9 @@
 
   body {
   background-color: ${bodyBgColor};
-}
+  }
 
-  #hero {
+  #HeroWrapper {
     display:${boolean1};
   } 
   #text-form {
@@ -133,7 +133,7 @@
     <div class="d-flex flex-wrap"> 
 
       <!-- Hero -->
-      <div class="container-fluid order-${heroOrder}" id="hero">
+      <div class="HeroWrapper container-fluid order-${heroOrder}">
         <div class="container">
           <div class="row">
             <div class="col-12 col-md-6 my-auto" id="hero-text">
