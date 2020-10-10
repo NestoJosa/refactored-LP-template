@@ -1,0 +1,14 @@
+// _LogoImg.scss
+
+/* 
+
+  LogoImg
+
+*/
+
+.LogoImg {
+  width: 40%;
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+}
