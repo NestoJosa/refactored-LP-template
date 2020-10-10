@@ -9,7 +9,7 @@
 .HeroText {
   color: #FFFFFF;
   padding: 12% 3% 12% 15px;
-  @media (max-width: 767px) { // error? max-width? this would overrule the previos, wouldnt it?
+  @media (min-width: 767px) {
     padding: 15% 10% 9% 15px;
   }
   @media (min-width: 1600px) {
