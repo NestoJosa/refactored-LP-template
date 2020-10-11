@@ -132,25 +132,26 @@
     <!-- Sections Order (All sections inside this div can be vertically ordered if a variable is created per section and class (including the variable) is appended to sections container-fluid)-->
     <div class="d-flex flex-wrap"> 
 
-      <!-- Hero -->
+      <!-- HeroWrapper -->
       <div class="HeroWrapper container-fluid order-${heroOrder}">
         <div class="container">
           <div class="row">
             <div class="col-12 col-md-6 my-auto">
               
+              <!-- Hero -->
               <div class="Hero mktoText" id="mktoHook-Hero" mktoName="Hero">
                 <p class="Hero__category">{{my.CON Hero__category}}</p>
                 <h1 class="Hero__heading">{{my.CON Hero__heading}}</h1>
                 <p class="Hero__subHeading">{{my.CON Hero__subHeading}}</p>
-              </div>
+              </div><!-- /Hero -->
               
             </div>
             <div class="col-12 col-md-6 align-self-end" id="hero-image-col">
               <div id="hero-image"><img src="${heroImg}" class="img-fluid"></div>
             </div>
-          </div>
-        </div>
-      </div> <!-- End of Hero -->
+          </div><!-- /row -->
+        </div><!-- /container -->
+      </div><!-- /HeroWrapper -->
 
       <!-- Text Form -->
       <div class="container-fluid order-${textFormOrder}" id="text-form">
