@@ -2,7 +2,7 @@
 
 // brand colors
 $brand-colors: (
-  'one': #0E0E0E,
+  'one': rgb(136, 187, 204),
   'two': #BB1E10,
 );
 
@@ -17,7 +17,7 @@ $font-stack: "Open Sans", sans-serif;
 $border: solid 4px #f4f6ff;
 
 // border-radius
-$border-radius: 8px;
+$border-radius: 0;
 
 // the standard max width
 $content-wrapper-max-width: 1600px;
