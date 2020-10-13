@@ -8,8 +8,8 @@
 
 .Footer {
   background-color: $footerBgColor;
+  color: map-get($font-colors, one);
   padding-top: 72px;
   padding-bottom: 56px;
-  color: #FFFFFF;
 }
 

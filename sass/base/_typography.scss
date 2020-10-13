@@ -9,11 +9,11 @@
 
 body {
   font-family: $font-stack;
-  color: map-get($brand-colors, one);
+  color: map-get($font-colors, one);
 }
 
 h1 {
-  color: map-get($brand-colors, blue-1);
+  color: map-get($font-colors, one);
   font-family: $font-stack;
   font-size: 2.52rem;
   font-stretch: normal;
@@ -36,7 +36,7 @@ h1 {
 }
 
 h2 {
-  color: map-get($brand-colors, blue-3);
+  color: map-get($font-colors, one);
   font-family: $font-stack;
   font-size: 0.8375rem; 
   font-stretch: normal;
@@ -48,7 +48,7 @@ h2 {
 }
 
 h3 {
-  color: map-get($brand-colors, blue-1);
+  color: map-get($font-colors, one);
   font-family: $font-stack;
   font-size: 1.3rem; 
   font-stretch: normal;
@@ -59,7 +59,7 @@ h3 {
 }
 
 h4 {
-  color: map-get($brand-colors, blue-1);
+  color: map-get($font-colors, one);
   font-family: $font-stack;
   font-size: 1.2rem; 
   font-stretch: normal;
@@ -70,7 +70,7 @@ h4 {
 }
 
 p {
-  color: map-get($brand-colors, blue-2);
+  color: map-get($font-colors, one);
   font-family: $font-stack;
   font-size: 1.06rem;
   font-stretch: normal;
@@ -82,7 +82,7 @@ p {
 }
 
 a {
-  color: map-get($brand-colors, two);
+  color: map-get($font-colors, one);
   text-decoration: underline;
 }
 
