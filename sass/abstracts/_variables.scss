@@ -39,3 +39,18 @@ $breakpoints: (
 
 // footer background color
 $footerBgColor: #F4F3EE;
+
+// Hero - match brakpoints with padding
+// note if you want to update the breakpoints,
+// you also have to update the breakpoints
+// inside of the hero components styles
+// refactor: make sure we call the same breakpoints
+// variable throughout the code
+$hero-breakpoints-and-padding: (
+  def: 13% 3% 13% 0,
+  767: 16% 10.5% 9.5% 0,
+  1600: 38% 7.5% 38% 0,
+  1800: 47% 8% 47% 0,
+  2000: 55.5% 8.5% 55.5% 0,
+  2200: 58.5% 8.5% 58.5% 0,
+);
