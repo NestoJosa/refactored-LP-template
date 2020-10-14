@@ -21,7 +21,6 @@ h1 {
   font-weight: 900;
   letter-spacing: normal;
   line-height: 1.25;
-  margin-bottom: 1.5rem;
   // respond to tablets upwards
   @include for-tablet-up {
     font-size: 2rem;
