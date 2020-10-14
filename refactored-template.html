@@ -10,7 +10,6 @@
   <meta class="mktoString" id="heroBgImg" mktoName="Hero BG IMG" allowHtml="true" default="">
   <meta class="mktoString" id="heroImg" mktoName="Hero IMG" allowHtml="true" default="">
   <meta class="mktoString" id="heroBgImgOverlay" mktoName="Hero BG IMG Overlay" allowHtml="true" default="linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0)), ">
-  <meta class="mktoString" id="formContainerMarginTop" mktoName="Form Container Margin Top" allowHtml="false" default="-145px">
   <meta class="mktoBoolean" id="boolean1" mktoName="Hero" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="boolean2" mktoName="Text Form" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="boolean3" mktoName="Privacy Policy Link" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
@@ -65,28 +64,26 @@
     background-color: #808080;
   }
 
-  @media (min-width: 768px) {
-    #form-container {
-      margin-top: ${formContainerMarginTop};
-    }
-  }
-
   body {
-  background-color: ${bodyBgColor};
+    background-color: ${bodyBgColor};
   }
 
   .HeroWrapper {
     display:${boolean1};
   } 
+
   #text-form {
     display:${boolean2};
   }
+
   #privacy-policy {
     display:${boolean3};
   }
+
   #framed-block {
     display:${boolean4};
   } 
+  
   #custom-block {
     display:${boolean5};
   } 
