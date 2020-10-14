@@ -35,9 +35,6 @@
   @media (min-width: 767px) {
     padding: map-get($hero-breakpoints-and-padding, 767);
   }
-  @media (min-width: 1600px) {
-    padding: map-get($hero-breakpoints-and-padding, 1600);
-  }
   @media (min-width: 1800px) {
     padding: map-get($hero-breakpoints-and-padding, 1800);
   }
