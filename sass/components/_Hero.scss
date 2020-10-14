@@ -8,21 +8,6 @@
 
 .Hero { 
   padding: map-get($hero-breakpoints-and-padding, def);
-  @media (min-width: 767px) {
-    padding: map-get($hero-breakpoints-and-padding, 767);
-  }
-  @media (min-width: 1600px) {
-    padding: map-get($hero-breakpoints-and-padding, 1600);
-  }
-  @media (min-width: 1800px) {
-    padding: map-get($hero-breakpoints-and-padding, 1800);
-  }
-  @media (min-width: 2000px) {
-    padding: map-get($hero-breakpoints-and-padding, 2000);
-  }
-  @media (min-width: 2200px) {
-    padding: map-get($hero-breakpoints-and-padding, 2200);
-  }
 
   &__category {
     color: map-get($font-colors, three);
@@ -39,5 +24,24 @@
     color: map-get($font-colors, three);
     font-size: 1.25rem;
     font-weight: 300;
+  }
+}
+
+/* Hero Modifier */
+.Hero--changePadding {
+  @media (min-width: 767px) {
+    padding: map-get($hero-breakpoints-and-padding, 767);
+  }
+  @media (min-width: 1600px) {
+    padding: map-get($hero-breakpoints-and-padding, 1600);
+  }
+  @media (min-width: 1800px) {
+    padding: map-get($hero-breakpoints-and-padding, 1800);
+  }
+  @media (min-width: 2000px) {
+    padding: map-get($hero-breakpoints-and-padding, 2000);
+  }
+  @media (min-width: 2200px) {
+    padding: map-get($hero-breakpoints-and-padding, 2200);
   }
 }
