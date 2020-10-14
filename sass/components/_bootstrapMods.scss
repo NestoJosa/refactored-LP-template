@@ -1,0 +1,16 @@
+// _boostrapMods.scss
+
+/* 
+
+  Bootstrap Modifications
+
+*/
+
+// add more top- and bottom padding to the 
+// bootstrap navbar-brand class
+.navbar-brand {
+  // OG: padding-top: .3125rem;
+  // OG: padding-bottom: .3125rem;
+  padding-top: .7125rem;
+  padding-bottom: .7125rem;
+}
