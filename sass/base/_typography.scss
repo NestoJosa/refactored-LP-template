@@ -22,7 +22,6 @@ h1 {
   letter-spacing: normal;
   line-height: 1.25;
   margin-bottom: 1.5rem;
-  text-transform: uppercase;
   // respond to tablets upwards
   @include for-tablet-up {
     font-size: 2rem;

@@ -7,8 +7,6 @@
 */
 
 .Hero {
-  color: #FFFFFF;
-
   padding: 12% 3% 12% 15px;
   @media (min-width: 767px) {
     padding: 15% 10% 9% 15px;
@@ -27,12 +25,18 @@
   }
 
   &__category {
-    text-transform: uppercase;
+    color: map-get($font-colors, three);
     font-size: 1.25rem;
     font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  &__heading {
+    color: map-get($font-colors, three);
   }
 
   &__subHeading {
+    color: map-get($font-colors, three);
     font-size: 1.25rem;
     font-weight: 300;
   }
