@@ -37,6 +37,18 @@
   background-color: #FFFFFF !important;
 } 
 
+// style the privacy policy link
+#privacy-policy {
+  text-align: center;
+}
+
+// make the privacy policy link color
+// slightly transparent
+#privacy-policy a {
+  color: #7d7d7d50;
+  font-size: 0.9rem;
+}
+
 /* Make columns 1, 2, 3, 4, 5 & 6 responsive */
 
 .mktoForm, .mktoForm .mktoFieldWrap, .mktoForm .mktoHtmlText, .mktoForm input {width:100% !important;}
