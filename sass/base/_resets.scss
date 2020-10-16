@@ -8,3 +8,7 @@
   box-sizing: border-box;
 }
 
+// remove default bullets from list items
+li {
+  list-style-type: none;
+}
