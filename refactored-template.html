@@ -210,33 +210,34 @@
   </div>   <!-- End of content -->
 
 
-  <footer class="Footer">
+  <footer class="FooterWrapper">
     <div class="container">
       <div class="row">
-        <div class="col-12">
-          <ul>
-            <li>{{my.CON Client Name}}</li>
-            <li>{{my.CON Client Address}}</li>
-            <li>{{my.CON Client Postal Number}} {{my.CON Client Postal Area}}</li>
-            <li>{{my.CON Client CVR Number}}</li>
-            <li>{{my.CON Client Phone Number}}</li>
-            <li>{{my.CON Client Email}}</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
+
+        <ul class="ClientDetailsList col-md-6">
+          <li class="ClientDetailsList__item">{{my.CON Client Name}}</li>
+          <li class="ClientDetailsList__item">{{my.CON Client Address}}</li>
+          <li class="ClientDetailsList__item">{{my.CON Client Postal Number}} {{my.CON Client Postal Area}}</li>
+          <li class="ClientDetailsList__item">{{my.CON Client CVR Number}}</li>
+          <li class="ClientDetailsList__item">{{my.CON Client Phone Number}}</li>
+          <li class="ClientDetailsList__item">{{my.CON Client Email}}</li>
+        </ul>
+
+      </div><!-- /row -->
+    </div><!-- /container -->
+  </footer><!-- /FooterWrapper -->
 
   <!-- Marketo Form JavaScript -->
   <script> 
   MktoForms2.whenReady(function(form) {  
 
-//Removes any querystring in the URL before logging Latest Form URL
-{{my.LP Latest Form URL Script}}
+    //Removes any querystring in the URL before logging Latest Form URL
+    {{my.LP Latest Form URL Script}}
 
-//Rewrites follow up URL so it uses same domain as form page
-{{my.LP Rewrite follow up URL}}    
-});  
+    //Rewrites follow up URL so it uses same domain as form page
+    {{my.LP Rewrite follow up URL}}    
+    });
+
   </script>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -244,7 +245,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <!-- Tokenized Foot JS, just in case {{my.DEV Comment Close}}
+  <!-- Tokenized Foot JS, just in case {{my.DEV Comment Close}}
   {{my.DEV Universal Foot JS}}
   {{my.DEV Folder Foot JS}}
   {{my.DEV Content Foot JS}}

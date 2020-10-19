@@ -6,11 +6,23 @@
 
 */
 
-.Footer {
+.FooterWrapper {
   background-color: $footerBgColor;
   color: map-get($font-colors, one);
   padding-top: 72px;
   padding-bottom: 56px;
+}
+
+/* ClientDetailsList */
+.ClientDetailsList {
+  &__item {
+    :first-child {
+      font-weight: bolder;
+    }
+    :empty {
+      display: none;
+    }
+  }
 }
 
 /* Sticky Footer Classes */
