@@ -28,19 +28,23 @@
 /* SoMeIconsList */
 .SoMeIconsList {
   display: flex;
+
+  &__item {
+    margin-right: 10px;
+  }
+
+  &__anchor {
+    width: 32px;
+    display: inline-block;
+    border-radius: 50px;
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: 50px;
+  }
 }
-.SoMeIconsList__item {
-  margin-right: 10px;
-}
-.SoMeIconsList__anchor {
-  width: 32px;
-  display: inline-block;
-  border-radius: 50px;
-}
-.SoMeIconsList__image {
-  width: 100%;
-  border-radius: 50px;
-}
+
 
 /* Sticky Footer Classes */
 html, body {
