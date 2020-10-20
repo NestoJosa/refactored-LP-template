@@ -10,11 +10,14 @@
   <meta class="mktoString" id="heroBgImg" mktoName="Hero BG IMG" allowHtml="true" default="">
   <meta class="mktoString" id="heroImg" mktoName="Hero IMG" allowHtml="true" default="">
   <meta class="mktoString" id="heroBgImgOverlay" mktoName="Hero BG IMG Overlay" allowHtml="true" default="linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0)), ">
+  
   <meta class="mktoBoolean" id="boolean1" mktoName="Hero" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="boolean2" mktoName="Text Form" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="boolean3" mktoName="Privacy Policy Link" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="boolean4" mktoName="Framed Block" default="false" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="boolean5" mktoName="Custom Block" default="false" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="SoMeIconsListWrapper--isDisplayed" mktoName="SoMeIconsListWrapper" default="false" true_value="block" false_value="none" true_value_name="Show" false_value_name="Hide">
+  
   <meta class="mktoString" id="heroOrder" mktoName="Hero Pos #" default="1"> 
   <meta class="mktoString" id="textFormOrder" mktoName="Text Form Pos #" default="2"> 
   <meta class="mktoString" id="framedBlockOrder" mktoName="Framed Block Pos #" default="3"> 
@@ -84,7 +87,11 @@
   
   #custom-block {
     display:${boolean5};
-  } 
+  }
+  
+  .SoMeIconsListWrapper {
+    display:${SoMeIconsListWrapper--isDisplayed};
+  }
 
   </style>
 
@@ -214,7 +221,7 @@
     <div class="container">
       <div class="row">
 
-        <ul class="ClientDetailsList col-md-6">
+        <ul class="ClientDetailsList col-md-7">
           <li class="ClientDetailsList__item">{{my.CON Client Name}}</li>
           <li class="ClientDetailsList__item">{{my.CON Client Address}}</li>
           <li class="ClientDetailsList__item">{{my.CON Client Postal Number}} {{my.CON Client Postal Area}}</li>
@@ -223,28 +230,30 @@
           <li class="ClientDetailsList__item">{{my.CON Client Email}}</li>
         </ul>
 
-        <ul class="SoMeIconsList col-md-6">
-          <li class="SoMeIconsList__item">
-            <a href="#" class="SoMeIconsList__anchor">
-              <img src="http://go.autobahncph.dk/rs/651-TMF-940/images/goa-ico-facebook-32x32%402x.png" class="SoMeIconsList__image" />
-            </a>
-          </li>
-          <li class="SoMeIconsList__item">
-            <a href="#" class="SoMeIconsList__anchor">
-              <img src="http://go.autobahncph.dk/rs/651-TMF-940/images/goa-ico-linked-in-32x32%402x.png" class="SoMeIconsList__image" />
-            </a>
-          </li>
-          <li class="SoMeIconsList__item">
-            <a href="#" class="SoMeIconsList__anchor">
-              <img src="http://go.autobahncph.dk/rs/651-TMF-940/images/goa-ico-youtube-32x32%402x.png" class="SoMeIconsList__image" />
-            </a>
-          </li>
-          <li class="SoMeIconsList__item">
-            <a href="#" class="SoMeIconsList__anchor">
-              <img src="http://go.autobahncph.dk/rs/651-TMF-940/images/goa-ico-twitter-32x32%402x.png" class="SoMeIconsList__image" />
-            </a>
-          </li>
-        </ul>
+        <div class="SoMeIconsListWrapper col-md-5">
+          <ul class="SoMeIconsList">
+            <li class="SoMeIconsList__item">
+              <a href="#" class="SoMeIconsList__anchor">
+                <img src="http://go.autobahncph.dk/rs/651-TMF-940/images/goa-ico-facebook-32x32%402x.png" class="SoMeIconsList__image" />
+              </a>
+            </li>
+            <li class="SoMeIconsList__item">
+              <a href="#" class="SoMeIconsList__anchor">
+                <img src="http://go.autobahncph.dk/rs/651-TMF-940/images/goa-ico-linked-in-32x32%402x.png" class="SoMeIconsList__image" />
+              </a>
+            </li>
+            <li class="SoMeIconsList__item">
+              <a href="#" class="SoMeIconsList__anchor">
+                <img src="http://go.autobahncph.dk/rs/651-TMF-940/images/goa-ico-youtube-32x32%402x.png" class="SoMeIconsList__image" />
+              </a>
+            </li>
+            <li class="SoMeIconsList__item">
+              <a href="#" class="SoMeIconsList__anchor">
+                <img src="http://go.autobahncph.dk/rs/651-TMF-940/images/goa-ico-twitter-32x32%402x.png" class="SoMeIconsList__image" />
+              </a>
+            </li>
+          </ul>
+        </div>
 
       </div><!-- /row -->
     </div><!-- /container -->
