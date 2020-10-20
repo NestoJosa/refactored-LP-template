@@ -16,10 +16,10 @@
 /* ClientDetailsList */
 .ClientDetailsList {
   &__item {
-    :first-child {
-      font-weight: bolder;
+    &:first-child {
+      font-weight: bold;
     }
-    :empty {
+    &:empty {
       display: none;
     }
   }
