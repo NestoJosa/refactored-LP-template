@@ -257,6 +257,9 @@
     // hide SoMeIconsList__item(s) that have a link which contain
     // "<!--" in the href's attribute value 
     $(".SoMeIconsList__item").has( "a[href*='<!--']" ).addClass( "d-none" );
+
+    // hide ClientDetailsList__item(s) that are empty
+    $( ".ClientDetailsList__item:empty" ).addClass( "d-none" );
   </script>
 
 </body>
