@@ -16,8 +16,9 @@
   <meta class="mktoBoolean" id="boolean3" mktoName="Privacy Policy Link" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="boolean4" mktoName="Framed Block" default="false" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="boolean5" mktoName="Custom Block" default="false" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="ClientDetailsListWrapper--isDisplayed" mktoName="ClientDetailsListWrapper" default="true" true_value="block" false_value="none" true_value_name="Show" false_value_name="Hide">
   <meta class="mktoBoolean" id="SoMeIconsListWrapper--isDisplayed" mktoName="SoMeIconsListWrapper" default="false" true_value="block" false_value="none" true_value_name="Show" false_value_name="Hide">
-  
+
   <meta class="mktoString" id="heroOrder" mktoName="Hero Pos #" default="1"> 
   <meta class="mktoString" id="textFormOrder" mktoName="Text Form Pos #" default="2"> 
   <meta class="mktoString" id="framedBlockOrder" mktoName="Framed Block Pos #" default="3"> 
@@ -89,6 +90,10 @@
     display:${boolean5};
   }
   
+  .ClientDetailsListWrapper {
+    display:${ClientDetailsListWrapper--isDisplayed}
+  }
+
   .SoMeIconsListWrapper {
     display:${SoMeIconsListWrapper--isDisplayed};
   }
