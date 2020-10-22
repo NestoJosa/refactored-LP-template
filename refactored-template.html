@@ -10,7 +10,7 @@
   <meta class="mktoString" id="heroBgImg" mktoName="Hero BG IMG" allowHtml="true" default="">
   <meta class="mktoString" id="heroBgImgOverlay" mktoName="Hero BG IMG Overlay" allowHtml="true" default="linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0)), ">
   
-  <meta class="mktoBoolean" id="HeroAndSubHeroWrapperIsDisplayed" mktoName="HeroAndSubHeroWrapper" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="HerosWrapperIsDisplayed" mktoName="HerosWrapper" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="boolean2" mktoName="Text Form" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="boolean3" mktoName="Privacy Policy Link" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="boolean4" mktoName="Framed Block" default="false" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
@@ -19,7 +19,7 @@
   <meta class="mktoBoolean" id="SoMeIconsListWrapperIsDisplayed" mktoName="SoMeIconsListWrapper" default="false" true_value="block" false_value="none" true_value_name="Show" false_value_name="Hide">
   <meta class="mktoBoolean" id="SubHeroIsDisplayed" mktoName="SubHero" default="false" true_value="block" false_value="none" true_value_name="Show" false_value_name="Hide">
 
-  <meta class="mktoString" id="heroOrder" mktoName="Hero Pos #" default="1"> 
+  <meta class="mktoString" id="HerosWrapperOrder" mktoName="HerosWrapper Pos #" default="1"> 
   <meta class="mktoString" id="textFormOrder" mktoName="Text Form Pos #" default="2"> 
   <meta class="mktoString" id="framedBlockOrder" mktoName="Framed Block Pos #" default="3"> 
   <meta class="mktoString" id="customBlockOrder" mktoName="Custom Block Pos #" default="4"> 
@@ -42,65 +42,65 @@
   <link rel="stylesheet" href="{{my.LP Webfont URL}}">
 
   <style>
-  /*  Lets Template Control Form Button Text */
-  .mktoForm button[type="submit"]:after {  
-    content: "${buttonText}";  
-  }  
-  .mktoForm button[type="submit"][disabled]:after {    
-    content: "";    
-  } 
+    /*  Lets Template Control Form Button Text */
+    .mktoForm button[type="submit"]:after {  
+      content: "${buttonText}";  
+    }  
+    .mktoForm button[type="submit"][disabled]:after {    
+      content: "";    
+    } 
 
-  /*  Tokenizes Checkbox text - Here Permissions Text */
-  .mktoCheckboxList input + label:after {
-    content:'{{my.Form Permission Text}}' !important;
-  }
+    /*  Tokenizes Checkbox text - Here Permissions Text */
+    .mktoCheckboxList input + label:after {
+      content:'{{my.Form Permission Text}}' !important;
+    }
 
-  .HeroAndSubHeroWrapper {
-    background: ${heroBgImgOverlay}url("${heroBgImg}");
-    -webkit-background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    background-size: 100% 100%;
-    background-size: cover;
-    background-position: center;
-    background-color: #808080;
-  }
+    .HerosWrapper {
+      background: ${heroBgImgOverlay}url("${heroBgImg}");
+      -webkit-background-size: 100% 100%;
+      -moz-background-size: 100% 100%;
+      -o-background-size: 100% 100%;
+      background-size: 100% 100%;
+      background-size: cover;
+      background-position: center;
+      background-color: #808080;
+    }
 
-  body {
-    background-color: ${bodyBgColor};
-  }
+    body {
+      background-color: ${bodyBgColor};
+    }
 
-  .HeroAndSubHeroWrapper {
-    display:${HeroAndSubHeroWrapperIsDisplayed};
-  }
-  
-  .SubHero {
-    display:${SubHeroIsDisplayed};
-  }
+    .HerosWrapper {
+      display:${HerosWrapperIsDisplayed};
+    }
+    
+    .SubHero {
+      display:${SubHeroIsDisplayed};
+    }
 
-  #text-form {
-    display:${boolean2};
-  }
+    #text-form {
+      display:${boolean2};
+    }
 
-  #privacy-policy {
-    display:${boolean3};
-  }
+    #privacy-policy {
+      display:${boolean3};
+    }
 
-  #framed-block {
-    display:${boolean4};
-  } 
-  
-  #custom-block {
-    display:${boolean5};
-  }
-  
-  .ClientInfoListWrapper {
-    display:${ClientInfoListWrapperIsDisplayed}
-  }
+    #framed-block {
+      display:${boolean4};
+    } 
+    
+    #custom-block {
+      display:${boolean5};
+    }
+    
+    .ClientInfoListWrapper {
+      display:${ClientInfoListWrapperIsDisplayed}
+    }
 
-  .SoMeIconsListWrapper {
-    display:${SoMeIconsListWrapperIsDisplayed};
-  }
+    .SoMeIconsListWrapper {
+      display:${SoMeIconsListWrapperIsDisplayed};
+    }
 
   </style>
 
@@ -145,8 +145,8 @@
     <!-- Sections Order (All sections inside this div can be vertically ordered if a variable is created per section and class (including the variable) is appended to sections container-fluid)-->
     <div class="d-flex flex-wrap"> 
 
-      <!-- HeroAndSubHeroWrapper -->
-      <div class="HeroAndSubHeroWrapper container-fluid order-${heroOrder}">
+      <!-- HerosWrapper -->
+      <div class="HerosWrapper container-fluid order-${HerosWrapperOrder}">
         <div class="container">
           <div class="row">
 
@@ -164,7 +164,7 @@
 
           </div><!-- /row -->
         </div><!-- /container -->
-      </div><!-- /HeroAndSubHeroWrapper -->
+      </div><!-- /HerosWrapper -->
 
       <!-- Text Form -->
       <div class="container-fluid order-${textFormOrder}" id="text-form">
@@ -248,6 +248,7 @@
     });
 
   </script>
+  
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
