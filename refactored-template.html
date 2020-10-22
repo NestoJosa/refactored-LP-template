@@ -22,7 +22,12 @@
   <meta class="mktoString" id="HerosWrapperOrder" mktoName="HerosWrapper Pos #" default="1"> 
   <meta class="mktoString" id="textFormOrder" mktoName="Text Form Pos #" default="2"> 
   <meta class="mktoString" id="framedBlockOrder" mktoName="Framed Block Pos #" default="3"> 
-  <meta class="mktoString" id="customBlockOrder" mktoName="Custom Block Pos #" default="4"> 
+  <meta class="mktoString" id="customBlockOrder" mktoName="Custom Block Pos #" default="4">
+  
+    <!-- Order variables for the two hero's that live inside of the HerosWrapper: Hero and SubHero -->
+    <meta class="mktoString" id="HeroOrder" mktoName="Hero Pos #" default="1"> 
+    <meta class="mktoString" id="SubHeroOrder" mktoName="SubHero Pos #" default="2"> 
+
   <meta class="mktoString" id="bodyBgColor" mktoName="Body Background Color" default="#FFFFFF"> 
   <!-- End of Marketo Variables -->
 
@@ -151,14 +156,14 @@
           <div class="row">
 
             <!-- Hero -->
-            <div class="Hero Hero--changePadding col-md-6 mktoText" id="mktoHook-Hero" mktoName="Hero">
+            <div class="Hero Hero--changePadding col-md-6 order-${HeroOrder} mktoText" id="mktoHook-Hero" mktoName="Hero">
               <p class="Hero__category">{{my.CON Category}}</p>
               <h1 class="Hero__heading">{{my.CON Name}}</h1>
               <p class="Hero__subHeading">{{my.CON Subheader}}</p>
             </div><!-- /Hero -->             
 
             <!-- SubHero -->
-            <div class="SubHero col-md-6 align-self-end">
+            <div class="SubHero col-md-6 align-self-end order-${SubHeroOrder}">
               <img src="{{my.CON Sub Hero Image Url}}" class="SubHero__image img-fluid">   
             </div><!-- /SubHero -->
 
@@ -248,7 +253,7 @@
     });
 
   </script>
-  
+
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
