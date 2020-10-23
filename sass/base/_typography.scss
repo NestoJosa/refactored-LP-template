@@ -32,7 +32,7 @@ h1 {
 h2 {
   color: map-get($font-colors, one);
   font-family: $font-stack;
-  font-size: 0.8375rem; 
+  font-size: 2.2rem; 
   font-stretch: normal;
   font-style: normal;
   font-weight: bold;
@@ -120,9 +120,3 @@ a {
   }
 }
 /* END Responsive Typography */
-
-// make the body heading four larger
-// refactor
-#bodyText1 h4 {
-  font-size: 2.2rem;
-}
