@@ -20,7 +20,7 @@
   <meta class="mktoBoolean" id="SubHeroIsDisplayed" mktoName="SubHero" default="false" true_value="block" false_value="none" true_value_name="Show" false_value_name="Hide">
 
   <meta class="mktoString" id="HerosWrapperOrder" mktoName="HerosWrapper Pos #" default="1"> 
-  <meta class="mktoString" id="textFormOrder" mktoName="Text Form Pos #" default="2"> 
+  <meta class="mktoString" id="MainWrapperPosNr" mktoName="MainWrapperPosNr" default="2"> 
   <meta class="mktoString" id="framedBlockOrder" mktoName="Framed Block Pos #" default="3"> 
   <meta class="mktoString" id="customBlockOrder" mktoName="Custom Block Pos #" default="4">
   
@@ -171,8 +171,8 @@
         </div><!-- /container -->
       </div><!-- /HerosWrapper -->
 
-      <!-- Text Form -->
-      <div class="container-fluid order-${textFormOrder}" id="text-form">
+      <!-- MainWrapper -->
+      <div class="MainWrapper container-fluid order-${MainWrapperPosNr}" >
         <div class="container">
           <div class="row">
 
@@ -181,7 +181,7 @@
                 <h4>{{my.CON Body Header}}</h4>
                 <p>{{my.CON Body Paragraph}}</p>
               </div>        
-            </div>
+            </div> 
             
             <div class="col-12 col-md-5">
               <div id="form-container">
@@ -200,7 +200,7 @@
 
           </div><!-- /row -->
         </div><!-- /container -->
-      </div> <!-- End of Text Form -->
+      </div> <!-- MainWrapper -->
 
       <!-- Framed Block -->
       <div class="container-fluid order-${framedBlockOrder}" id="framed-block">
