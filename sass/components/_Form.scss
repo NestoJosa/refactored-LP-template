@@ -6,28 +6,23 @@
 
 */
 
-// style the container
-// use the same styles as on SCT LP
-#form-container {
+.Form {
   background-color: #FFFFFF;
   border-radius: 0;
   padding: 48px 5%;
   -moz-box-shadow:    2px 4px 32px 0px rgba(0, 0, 0, 0.12);
   -webkit-box-shadow: 2px 4px 32px 0px rgba(0, 0, 0, 0.12);
   box-shadow:         2px 4px 32px 0px rgba(0, 0, 0, 0.12);
-}
 
-@media (min-width: 768px) {
-  #form-container {
-    margin-top: -142px;
+  &__privacyLink {
+    text-align: center;
+    color: #7d7d7d50;
+    font-size: 0.9rem;
   }
 }
 
-// add the down-pointing-arrow to the select dropdown
-// note: we are targeting a very specific selector - 
-// so you cannot reuse the following
-// #refactor!
-#goaJobTitle {
+// add a down-pointing-arrow to the forms select element 
+.mktoForm select {
   background: url(http://go.autobahncph.dk/rs/651-TMF-940/images/triangle-down-w-right-space.png) no-repeat !important;
     background-color: rgba(0, 0, 0, 0);
     background-position-x: 0%;
@@ -35,18 +30,6 @@
   background-position: right center !important;
   background-color: #FFFFFF !important;
 } 
-
-// style the privacy policy link
-#privacy-policy {
-  text-align: center;
-}
-
-// make the privacy policy link color
-// slightly transparent
-#privacy-policy a {
-  color: #7d7d7d50;
-  font-size: 0.9rem;
-}
 
 /* Make columns 1, 2, 3, 4, 5 & 6 responsive */
 
@@ -342,7 +325,7 @@ body .mktoForm .mktoRadioList > label {
   color: #7d7d7d !important;
 }
 
-label{
+.mktoForm label {
   font-family: $font-stack !important;
   font-size: 16px !important;
   font-style: italic !important;
