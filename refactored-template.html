@@ -182,20 +182,21 @@
               <div class="MainContent__body">{{my.CON Main Content Body}}</div>
             </div><!-- /MainContent -->
             
-            <div class="col-12 col-md-5">
-              <div id="form-container">
-                <div class="mktoText" id="aboveFormText1" mktoName="Above Form Text 1">
-                  <h4 class="text-center" id="form-header">{{my.CON Form Header}}</h4>
-                  <p class="text-center" id="form-paragraph">{{my.CON Form Paragraph}}</p>
-                </div>  
-                <div class="mktoForm" id="Form1" mktoName="Form 1"></div> 
-                  <div class="mktoText" id="belowFormText1" mktoName="Below Form Text 1">
-                  <div id="privacy-policy">
-                  <p><a href="{{my.LP Privacy Policy URL}}" target="_blank">{{my.LP Privacy Policy Link Text}}</a></p>
-                </div>  
-                </div> 
-              </div>  
-            </div>
+            <!-- MainForm -->
+            <div id="MainForm col-md-5">
+              <div class="MainForm__preTextWrp mktoText" id="mktoHook-MainForm__preTextWrp" mktoName="MainForm__preTextWrp">
+                <h2 class="MainForm__heading">{{my.CON Main Form Heading}}</h2>
+                <p class="MainForm__subHeading">{{my.CON Main Form Sub Heading}}</p>
+              </div><!-- /MainForm__preTextWrp -->  
+              <div class="MktoForm" id="mktoHook-MarketoForm" mktoName="MarketoForm">
+                <!-- Mkto Form -->
+              </div> 
+              <div class="MainForm__subTextWrp mktoText" id="mktoHook-MainForm__subTextWrp" mktoName="MainForm__subTextWrp">
+                <a class="MainForm__privacyLink" href="{{my.LP Main Form Privacy Link}}" target="_blank">
+                  {{my.LP Main Form Privacy Link Text}}
+                </a>
+              </div><!-- /MainForm__subTextWrp --> 
+            </div><!-- /MainForm -->  
 
           </div><!-- /row -->
         </div><!-- /container -->
