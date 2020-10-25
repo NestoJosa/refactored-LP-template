@@ -4,6 +4,10 @@
 
 */
 
-
-
+// respond to xxl by increasing the width of the bootstrap containers 
+.container {
+  @include for-xxl-up {
+    max-width: 1400px;
+  }
+}
 
