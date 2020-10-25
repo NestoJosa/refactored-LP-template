@@ -20,10 +20,10 @@
   <meta class="mktoBoolean" id="SubHeroIsDisplayed" mktoName="SubHero" default="false" true_value="block" false_value="none" true_value_name="Show" false_value_name="Hide">
   <meta class="mktoBoolean" id="FooterWrapperIsDisplayed" mktoName="FooterWrapper" default="true" true_value="block" false_value="none" true_value_name="Show" false_value_name="Hide">
 
-  <meta class="mktoString" id="HerosWrapperOrder" mktoName="HerosWrapper Pos #" default="1"> 
+  <meta class="mktoString" id="HerosWrapperPosNr" mktoName="HerosWrapperPosNr" default="1"> 
   <meta class="mktoString" id="MainWrapperPosNr" mktoName="MainWrapperPosNr" default="2"> 
-  <meta class="mktoString" id="framedBlockOrder" mktoName="Framed Block Pos #" default="3"> 
-  <meta class="mktoString" id="customBlockOrder" mktoName="Custom Block Pos #" default="4">
+  <meta class="mktoString" id="framedBlockPosNr" mktoName="framedBlockPosNr" default="3"> 
+  <meta class="mktoString" id="customBlockPosNr" mktoName="customBlockPosNr" default="4">
   
     <!-- Order variables for the two hero's that live inside of the HerosWrapper: Hero and SubHero -->
     <meta class="mktoString" id="HeroOrder" mktoName="Hero Pos #" default="1"> 
@@ -156,7 +156,7 @@
     <div class="d-flex flex-wrap"> 
 
       <!-- HerosWrapper -->
-      <div class="HerosWrapper container-fluid order-${HerosWrapperOrder}">
+      <div class="HerosWrapper container-fluid order-${HerosWrapperPosNr}">
         <div class="container">
           <div class="row">
 
@@ -208,7 +208,7 @@
       </div> <!-- MainWrapper -->
 
       <!-- Framed Block -->
-      <div class="container-fluid order-${framedBlockOrder}" id="framed-block">
+      <div class="container-fluid order-${framedBlockPosNr}" id="framed-block">
         <div class="container">
           <div class="row">
             <div class="col-12">
@@ -223,7 +223,7 @@
       </div> <!-- End of Framed Block -->  
 
       <!-- Custom Block -->
-      <div class="container-fluid order-${customBlockOrder}" id="custom-block">
+      <div class="container-fluid order-${customBlockPosNr}" id="custom-block">
         <div class="container">
           <div class="row">
             <div class="mktoText" id="customBlockHTML" mktoName="Custom Block HTML">
