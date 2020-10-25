@@ -20,11 +20,11 @@ h1 {
   font-weight: 300;
 
   // respond to tablets upwards
-  @include for-tablet-up {
+  @include for-md-up {
     font-size: 2.7rem;
   }
   // respond to laptop upwards
-  @include for-desktop-up {
+  @include for-xl-up {
     font-size: 2.9rem;
   }
 }

@@ -7,7 +7,8 @@
 */
 
 .Hero { 
-  padding: 13% 3% 13% 15px;
+  padding-top: 13%;
+  padding-bottom: 10%;
 
   &__category {
     color: map-get($font-colors, three);
@@ -30,15 +31,9 @@
   }
 }
 
-/* Hero Modifier */
 .Hero--changePadding {
-  @include for-tablet-up{
-    padding: 26% 7.5% 26% 15px;
-  }
-  @include for-desktop-up{
-    padding: 47% 8% 47% 15px;
-  }
-  @include for-wide-desktop-up{
-    padding: 58.5% 8.5% 58.5% 15px;
+  @include for-xxl-up{
+    padding-top: 23%;
+    padding-bottom: 20%;
   }
 }

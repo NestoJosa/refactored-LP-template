@@ -22,7 +22,7 @@
 }
 
 .Form--changeMargin {
-  @include for-tablet-up { 
+  @include for-md-up { 
     & {
       margin-top: -142px;
     }  
