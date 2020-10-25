@@ -5,33 +5,5 @@
 */
 
 
-// Media Queries
 
-// first breakpoint
-@mixin for-md-up {
-  @media only screen and (min-width: map-get($breakpoints, 'md' )) {
-    @content;
-  }  
-}
-
-// second breakpoint
-@mixin for-lg-up {
-  @media only screen and (min-width: map-get($breakpoints, 'lg' )) {
-    @content;
-  }  
-}
-
-// third breakpoint
-@mixin for-xl-up {
-  @media only screen and (min-width: map-get($breakpoints, 'xl' )) {
-    @content;
-  }  
-}
-
-// fourth breakpoint
-@mixin for-xxl-up {
-  @media only screen and (min-width: map-get($breakpoints, 'xxl' )) {
-    @content;
-  }  
-}
 
