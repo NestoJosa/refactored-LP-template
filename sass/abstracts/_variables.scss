@@ -48,19 +48,5 @@ $breakpoints: (
   xl: 1200px
 );
 
-// Hero - match brakpoints with padding
-// note if you want to update the breakpoints,
-// you also have to update the breakpoints
-// inside of the hero components styles
-// refactor: make sure we call the same breakpoints
-// variable throughout the code
-$hero-breakpoints-and-padding: (
-  def: 13% 3% 13% 15px,
-  767: 26% 7.5% 26% 15px,
-  1800: 47% 8% 47% 15px,
-  2000: 55.5% 8.5% 55.5% 15px,
-  2200: 58.5% 8.5% 58.5% 15px,
-);
-
 // framedBlockBGColor
 $framedBlockBGColor: #F4F3EE50; // => #RRGGBBAA (red, green, blue, alpha)
