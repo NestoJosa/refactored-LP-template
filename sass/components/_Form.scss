@@ -175,19 +175,20 @@ body .mktoForm .mktoCheckboxList > label {
   font-weight: 400 !important;
 }
 
-  /*  Puts Checkbox label after Checkbox */
-  .mktoCheckboxList input + label:after {
-    color: #325769!important;
-    font-family: $font-stack !important;
-    font-size: 14px!important;
-    line-height: 20px;
-    font-weight: 400!important;
-    letter-spacing: 0.2px;
+/*  Puts Checkbox label after Checkbox */
+.mktoCheckboxList input + label:after {
+  color: #325769!important;
+  font-family: $font-stack !important;
+  font-size: 14px!important;
+  line-height: 20px;
+  font-weight: 400!important;
+  letter-spacing: 0.2px;
 }
-  body .mktoForm .mktoCheckboxList > label {
-    margin-left:0;
-    display:flex;
-  } 
+
+body .mktoForm .mktoCheckboxList > label {
+  margin-left:0;
+  display:flex;
+} 
 
 /* Radio Button styles */
 
@@ -280,23 +281,23 @@ body .mktoForm .mktoRadioList > label {
 }
 
 .mktoForm .mktoButtonWrap.mktoSimple .mktoButton{
-    font-family: $font-stack !important;
-    font-weight: 700 !important;
-    letter-spacing: 1px !important;
-    line-height: 1.5 !important;
-    text-align: center !important;
-    text-transform: uppercase !important;
-    background-color: map-get($brand-colors, one) !important;
-    border-radius: $border-radius !important;
-    border: none !important;
-    color: #ffffff !important;
-    font-size: 16px !important;
-    padding-top: 1.1em !important;
-    padding-bottom: 1.15em !important;
-    margin-bottom: 1.7em !important;
-    margin-top: 0px !important;
-    width: 100% !important;
-    background-image: none !important;
+  font-family: $font-stack !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+  line-height: 1.5 !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+  background-color: map-get($brand-colors, one) !important;
+  border-radius: $border-radius !important;
+  border: none !important;
+  color: #ffffff !important;
+  font-size: 16px !important;
+  padding-top: 1.1em !important;
+  padding-bottom: 1.15em !important;
+  margin-bottom: 1.7em !important;
+  margin-top: 0px !important;
+  width: 100% !important;
+  background-image: none !important;
 }
 
 .mktoForm .mktoButtonWrap.mktoSimple .mktoButton:hover {
