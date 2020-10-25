@@ -22,7 +22,7 @@
 }
 
 .Form--changeMargin {
-  @include media-breakpoint-up(md) { 
+  @include for-tablet-up { 
     & {
       margin-top: -142px;
     }  

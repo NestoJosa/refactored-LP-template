@@ -30,15 +30,23 @@ $box-shaddow:
   0 15px 40px rgba(166,173,201,0.2)
 ;
 
-// breakpoints for media queries
-$breakpoints: (
-  'large': 82em, // => 1312px 
-  'medium': 62em, // => 992px
-  'small': 43em, // => 688px
-);
-
 // footer background color
 $footerBgColor: #F4F3EE;
+
+// Bootstrap Breakpoints
+// src: https://getbootstrap.com/docs/4.1/layout/grid/
+$breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 576px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px
+);
 
 // Hero - match brakpoints with padding
 // note if you want to update the breakpoints,

@@ -24,7 +24,7 @@ h1 {
     font-size: 2.7rem;
   }
   // respond to laptop upwards
-  @include for-laptop-up {
+  @include for-desktop-up {
     font-size: 2.9rem;
   }
 }

@@ -4,36 +4,26 @@
 
 */
 
-// the grid
-@mixin grid-cols-and-gap {
-  display: grid;
-  grid-template-columns: 5% [content-start] repeat(12, 1fr) [content-end] 5%; 
-  column-gap: 2%;
-}
-
-// the max-width and margin auto
-@mixin max-width-margin-auto  {
-  max-width: $content-wrapper-max-width;
-  margin: auto;
-}
 
 // Media Queries
+
+// first breakpoint
 @mixin for-tablet-up {
-  @media only screen and (min-width: map-get($breakpoints, 'small' )) {
+  @media only screen and (min-width: map-get($breakpoints, 'md' )) {
     @content;
   }  
 }
 
 // second breakpoint
-@mixin for-laptop-up {
-  @media only screen and (min-width: map-get($breakpoints, 'medium' )) {
+@mixin for-desktop-up {
+  @media only screen and (min-width: map-get($breakpoints, 'lg' )) {
     @content;
   }  
 }
 
 // third breakpoint
-@mixin for-desktop-up {
-  @media only screen and (min-width: map-get($breakpoints, 'large' )) {
+@mixin for-wide-desktop-up {
+  @media only screen and (min-width: map-get($breakpoints, 'xl' )) {
     @content;
   }  
 }
