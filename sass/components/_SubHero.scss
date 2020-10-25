@@ -1,0 +1,13 @@
+// _SubHero.scss
+
+/* 
+
+  SubHero
+
+*/
+
+.SubHero {
+  @include for-md-up {
+    order: 2 !important;
+  }
+}
