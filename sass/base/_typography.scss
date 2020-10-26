@@ -18,15 +18,6 @@ h1 {
   font-size: 2.5rem;
   line-height: 1.25;
   font-weight: 300;
-
-  // respond to tablets upwards
-  @include for-md-up {
-    font-size: 2.7rem;
-  }
-  // respond to laptop upwards
-  @include for-xl-up {
-    font-size: 2.9rem;
-  }
 }
 
 h2 {
@@ -37,39 +28,61 @@ h2 {
   font-style: normal;
   font-weight: bold;
   letter-spacing: 0.064375rem;
-  line-height: 1.49;
+  line-height: 1.25;
   text-transform: uppercase;
 }
 
 h3 {
   color: map-get($font-colors, one);
   font-family: $font-stack;
-  font-size: 1.3rem; 
+  font-size: 1.8rem; 
   font-stretch: normal;
   font-style: normal;
   font-weight: 900;
   letter-spacing: normal;
-  line-height: 1.28;
+  line-height: 1.25;
 }
 
 h4 {
   color: map-get($font-colors, one);
   font-family: $font-stack;
-  font-size: 1.2rem; 
+  font-size: 1.5rem; 
   font-stretch: normal;
   font-style: normal;
   font-weight: bold;
   letter-spacing: normal;
-  line-height: 1.46;
+  line-height: 1.35;
+}
+
+h5 {
+  color: map-get($font-colors, one);
+  font-family: $font-stack;
+  font-size: 1.3rem; 
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: normal;
+  line-height: 1.35;
+}
+
+h6 {
+  color: map-get($font-colors, one);
+  font-family: $font-stack;
+  font-size: 1.1rem; 
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: normal;
+  line-height: 1.35;
 }
 
 p {
   color: map-get($font-colors, one);
   font-family: $font-stack;
-  font-size: 1.06rem;
+  font-size: 1.1rem;
   font-stretch: normal;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   letter-spacing: normal;
   line-height: 1.65;
   letter-spacing: normal;
@@ -79,6 +92,24 @@ a {
   color: map-get($font-colors, one);
   text-decoration: underline;
 }
+
+// change the bootstrap display class
+.display-1, .display-2, .display-3, .display-4 {
+  font-weight: 900;
+}
+.display-1 {
+  font-size: 4.88rem;
+}
+.display-2 {
+  font-size: 4.13rem;
+}
+.display-3 {
+  font-size: 3.5rem;
+}
+.display-4 {
+  font-size: 2.97rem;
+}
+
 
 
 /* 
@@ -101,6 +132,21 @@ a {
     font-size: calc(1.275rem + 0.3vw);
   }
   legend {
+    font-size: calc(1.275rem + 0.3vw);
+  }
+  .display-1 {
+    font-size: calc(1.725rem + 5.7vw);
+  }
+  .display-2 {
+    font-size: calc(1.675rem + 5.1vw);
+  }
+  .display-3 {
+    font-size: calc(1.575rem + 3.9vw);
+  }
+  .display-4 {
+    font-size: calc(1.475rem + 2.7vw);
+  }
+  .close {
     font-size: calc(1.275rem + 0.3vw);
   }
 }
