@@ -276,8 +276,12 @@
     // "<!--" in the href's attribute value 
     $(".SoMeIconsList__item").has( "a[href*='<!--']" ).addClass( "d-none" );
 
-    // hide ClientInfoList__item(s) that are empty
-    $( ".ClientInfoList__item:empty" ).addClass( "d-none" );
+    // hide empty client info list items
+    $('.ClientInfoList > li').each(function () {
+      if ( jQuery.trim(this.innerText)  == '' ) { 		
+        $( this ).addClass( "d-none" );
+      }	  
+    });
   </script>
 
 </body>
