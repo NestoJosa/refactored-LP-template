@@ -8,6 +8,10 @@
 
 .SubHero {
   padding: 0;
+
+  // if the order of the hero and subhero has been changed
+  // so that the subhero sits on top of the hero
+  // make sure this change is reverted on md up
   @include for-md-up {
     order: 2 !important;
   }
