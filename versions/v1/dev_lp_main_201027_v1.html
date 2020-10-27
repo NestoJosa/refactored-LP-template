@@ -9,7 +9,6 @@
   <meta class="mktoString" id="buttonText" mktoName="Button CTA Text" default="{{my.CON CTA Button}}">
   <meta class="mktoString" id="heroBgImg" mktoName="Hero BG IMG" allowHtml="true" default="">
   <meta class="mktoString" id="heroBgImgOverlay" mktoName="Hero BG IMG Overlay" allowHtml="true" default="linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0)), ">
-  
   <meta class="mktoBoolean" id="HerosWrapperIsDisplayed" mktoName="HerosWrapper" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="MainWrapperIsDisplayed" mktoName="MainWrapper" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="Form__privacyLinkIsDisplayed" mktoName="Form__privacyLink" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
@@ -19,16 +18,13 @@
   <meta class="mktoBoolean" id="SoMeIconsListWrapperIsDisplayed" mktoName="SoMeIconsListWrapper" default="false" true_value="block" false_value="none" true_value_name="Show" false_value_name="Hide">
   <meta class="mktoBoolean" id="SubHeroIsDisplayed" mktoName="SubHero" default="false" true_value="block" false_value="none" true_value_name="Show" false_value_name="Hide">
   <meta class="mktoBoolean" id="FooterWrapperIsDisplayed" mktoName="FooterWrapper" default="true" true_value="block" false_value="none" true_value_name="Show" false_value_name="Hide">
-
   <meta class="mktoString" id="HerosWrapperPosNr" mktoName="HerosWrapperPosNr" default="1"> 
   <meta class="mktoString" id="MainWrapperPosNr" mktoName="MainWrapperPosNr" default="2"> 
   <meta class="mktoString" id="framedBlockPosNr" mktoName="framedBlockPosNr" default="3"> 
   <meta class="mktoString" id="customBlockPosNr" mktoName="customBlockPosNr" default="4">
-  
-    <!-- Order variables for the two hero's that live inside of the HerosWrapper: Hero and SubHero -->
-    <meta class="mktoString" id="HeroOrder" mktoName="Hero Pos #" default="1"> 
-    <meta class="mktoString" id="SubHeroOrder" mktoName="SubHero Pos #" default="2"> 
-
+  <!-- Position variables for the two hero's that live inside of the HerosWrapper: Hero and SubHero -->
+  <meta class="mktoString" id="HeroPosNr" mktoName="HeroPosNr" default="1"> 
+  <meta class="mktoString" id="SubHeroPosNr" mktoName="SubHeroPosNr" default="2"> 
   <meta class="mktoString" id="bodyBgColor" mktoName="Body Background Color" default="#FFFFFF"> 
   <!-- End of Marketo Variables -->
 
@@ -161,14 +157,14 @@
           <div class="row">
 
             <!-- Hero -->
-            <div class="Hero Hero--changePadding col-md-6 order-${HeroOrder} mktoText" id="mktoHook-Hero" mktoName="Hero">
+            <div class="Hero Hero--changePadding col-md-6 order-${HeroPosNr} mktoText" id="mktoHook-Hero" mktoName="Hero">
               <p class="Hero__category">{{my.CON Category}}</p>
               <h1 class="Hero__heading">{{my.CON Name}}</h1>
               <p class="Hero__subHeading">{{my.CON Subheader}}</p>
             </div><!-- /Hero -->             
 
             <!-- SubHero -->
-            <div class="SubHero col-md-6 align-self-center order-${SubHeroOrder}">
+            <div class="SubHero col-md-6 align-self-center order-${SubHeroPosNr}">
               <img src="{{my.CON Sub Hero Image Url}}" class="img-fluid">   
             </div><!-- /SubHero -->
 
@@ -272,16 +268,15 @@
   {{my.DEV Comment Open}} / End of Tokenized Foot JS, just in case -->
 
   <script>
-    // hide SoMeIconsList__item(s) that have a link which contain
-    // "<!--" in the href's attribute value 
-    $(".SoMeIconsList__item").has( "a[href*='<!--']" ).addClass( "d-none" );
-
-    // hide empty client info list items
-    $('.ClientInfoList > li').each(function () {
+    // hide empty client info list item(s)
+    $( "#jsHook-ClientInfoList > li" ).each(function () {
       if ( jQuery.trim(this.innerText)  == '' ) { 		
         $( this ).addClass( "d-none" );
       }	  
     });
+
+    // hide empty SoMe icon list item(s)
+    $( "#jsHook-SoMeIconsList > li" ).has( "a[href*='<!--']" ).addClass( "d-none" );
   </script>
 
 </body>

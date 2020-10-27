@@ -33,7 +33,3 @@ Snippet powered footer
 Heroswrapper - where the hero and subhero live
 - the subhero is not displayed as default, but can be toggle on
 - the order of the hero and subhero can be changed, but any change to the position of the hero/subhero will only take effect on mobile: the change is reverted on bigger screens
-
-
-
-
