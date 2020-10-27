@@ -21,17 +21,11 @@ $border: solid 4px #f4f6ff;
 // border-radius
 $border-radius: 0;
 
-// the standard max width
-$content-wrapper-max-width: 1600px;
-
 // box-shaddow
 $box-shaddow:
   0  5px 10px rgba(154,160,185,0.05),
   0 15px 40px rgba(166,173,201,0.2)
 ;
-
-// footer background color
-$footerBgColor: #F4F3EE;
 
 // Bootstrap Breakpoints
 // src: https://getbootstrap.com/docs/4.1/layout/grid/
@@ -50,6 +44,9 @@ $breakpoints: (
   // Extra Extra large screen
   xxl: 1800px
 );
+
+// footer background color
+$footerBgColor: #F4F3EE;
 
 // framedBlockBGColor
 $framedBlockBGColor: #F4F3EE50; // => #RRGGBBAA (red, green, blue, alpha)
