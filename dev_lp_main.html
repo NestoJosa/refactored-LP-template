@@ -272,12 +272,11 @@
   {{my.DEV Comment Open}} / End of Tokenized Foot JS, just in case -->
 
   <script>
-    // hide SoMeIconsList__item(s) that have a link which contain
-    // "<!--" in the href's attribute value 
-    $(".SoMeIconsList__item").has( "a[href*='<!--']" ).addClass( "d-none" );
+    // hide empty SoMe icon list item(s), 
+    $( "#jsHook-SoMeIconsList > li" ).has( "a[href*='<!--']" ).addClass( "d-none" );
 
-    // hide empty client info list items
-    $('.ClientInfoList > li').each(function () {
+    // hide empty client info list item(s),
+    $( "#jsHook-ClientInfoList > li" ).each(function () {
       if ( jQuery.trim(this.innerText)  == '' ) { 		
         $( this ).addClass( "d-none" );
       }	  
