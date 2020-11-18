@@ -15,42 +15,24 @@ body {
 h1 {
   color: map-get($font-colors, one);
   font-family: $font-stack;
-  font-size: 2.5rem;
   line-height: 1.25;
-  font-weight: 300;
 }
 
 h2 {
   color: map-get($font-colors, one);
   font-family: $font-stack;
-  font-size: 2.2rem; 
-  font-stretch: normal;
-  font-style: normal;
-  font-weight: bold;
-  letter-spacing: 0.064375rem;
   line-height: 1.25;
-  text-transform: uppercase;
 }
 
 h3 {
   color: map-get($font-colors, one);
   font-family: $font-stack;
-  font-size: 1.8rem; 
-  font-stretch: normal;
-  font-style: normal;
-  font-weight: 900;
-  letter-spacing: normal;
   line-height: 1.25;
 }
 
 h4 {
   color: map-get($font-colors, one);
   font-family: $font-stack;
-  font-size: 1.5rem; 
-  font-stretch: normal;
-  font-style: normal;
-  font-weight: bold;
-  letter-spacing: normal;
   line-height: 1.35;
 }
 
@@ -58,10 +40,6 @@ h5 {
   color: map-get($font-colors, one);
   font-family: $font-stack;
   font-size: 1.3rem; 
-  font-stretch: normal;
-  font-style: normal;
-  font-weight: bold;
-  letter-spacing: normal;
   line-height: 1.35;
 }
 
@@ -69,10 +47,6 @@ h6 {
   color: map-get($font-colors, one);
   font-family: $font-stack;
   font-size: 1.1rem; 
-  font-stretch: normal;
-  font-style: normal;
-  font-weight: bold;
-  letter-spacing: normal;
   line-height: 1.35;
 }
 
@@ -80,12 +54,7 @@ p {
   color: map-get($font-colors, one);
   font-family: $font-stack;
   font-size: 1.1rem;
-  font-stretch: normal;
-  font-style: normal;
-  font-weight: 300;
-  letter-spacing: normal;
   line-height: 1.65;
-  letter-spacing: normal;
 }
 
 a {
@@ -93,24 +62,11 @@ a {
   text-decoration: underline;
 }
 
-// change the bootstrap display class
-.display-1, .display-2, .display-3, .display-4 {
-  font-weight: 900;
+ul {
+  color: map-get($font-colors, one);
+  font-family: $font-stack;
+  font-size: 1.1rem;
 }
-.display-1 {
-  font-size: 4.88rem;
-}
-.display-2 {
-  font-size: 4.13rem;
-}
-.display-3 {
-  font-size: 3.5rem;
-}
-.display-4 {
-  font-size: 2.97rem;
-}
-
-
 
 /* 
 
@@ -150,4 +106,38 @@ a {
     font-size: calc(1.275rem + 0.3vw);
   }
 }
+
 /* END Responsive Typography */
+
+@include for-xxl-up{
+  h1 {
+    font-size: 59px;
+  }
+  h2 {
+    font-size: 38px;
+  }
+  h3 {
+    font-size: 32px;
+  }
+  h4 {
+    font-size: 26px;
+  }
+  legend {
+    font-size: 26px;
+  }
+  .display-1 {
+    font-size: 131px;
+  }
+  .display-2 {
+    font-size: 119px;
+  }
+  .display-3 {
+    font-size: 96px;
+  }
+  .display-4 {
+    font-size: 73px;
+  }
+  .close {
+    font-size: 26px;
+  }
+}
