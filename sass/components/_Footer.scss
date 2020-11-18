@@ -7,8 +7,8 @@
 */
 
 .FooterWrapper {
-  background-color: $footerBgColor;
-  color: map-get($font-colors, one);
+  background-color: map-get($brand-colors, one);
+  color: map-get($font-colors, three);
   padding-top: 72px;
   padding-bottom: 56px;
 }
