@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="{{my.LP HTML Lang}}">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Marketo Variables -->
+  <meta class="mktoString" id="buttonText" mktoName="Button CTA Text" default="{{my.CON CTA Button}}">
+  <meta class="mktoString" id="heroBgImg" mktoName="Hero BG IMG" allowHtml="true" default="">
+  <meta class="mktoString" id="heroBgImgOverlay" mktoName="Hero BG IMG Overlay" allowHtml="true" default="linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0)), ">
+  <meta class="mktoBoolean" id="HerosWrapperIsDisplayed" mktoName="HerosWrapper" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="MainWrapperIsDisplayed" mktoName="MainWrapper" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="Form__privacyLinkIsDisplayed" mktoName="Form__privacyLink" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="boolean4" mktoName="Framed Block" default="false" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="boolean5" mktoName="Custom Block" default="false" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="ClientInfoListWrapperIsDisplayed" mktoName="ClientInfoListWrapper" default="true" true_value="block" false_value="none" true_value_name="Show" false_value_name="Hide">
+  <meta class="mktoBoolean" id="SoMeIconsListWrapperIsDisplayed" mktoName="SoMeIconsListWrapper" default="false" true_value="block" false_value="none" true_value_name="Show" false_value_name="Hide">
+  <meta class="mktoBoolean" id="SubHeroIsDisplayed" mktoName="SubHero" default="false" true_value="block" false_value="none" true_value_name="Show" false_value_name="Hide">
+  <meta class="mktoBoolean" id="FooterWrapperIsDisplayed" mktoName="FooterWrapper" default="true" true_value="block" false_value="none" true_value_name="Show" false_value_name="Hide">
+  <meta class="mktoString" id="HerosWrapperPosNr" mktoName="HerosWrapperPosNr" default="1"> 
+  <meta class="mktoString" id="MainWrapperPosNr" mktoName="MainWrapperPosNr" default="2"> 
+  <meta class="mktoString" id="framedBlockPosNr" mktoName="framedBlockPosNr" default="3"> 
+  <meta class="mktoString" id="customBlockPosNr" mktoName="customBlockPosNr" default="4">
+  <!-- Position variables for the two hero's that live inside of the HerosWrapper: Hero and SubHero -->
+  <meta class="mktoString" id="HeroPosNr" mktoName="HeroPosNr" default="1"> 
+  <meta class="mktoString" id="SubHeroPosNr" mktoName="SubHeroPosNr" default="2"> 
+  <meta class="mktoString" id="bodyBgColor" mktoName="Body Background Color" default="#FFFFFF"> 
+  <!-- End of Marketo Variables -->
+
+  <!-- Tokenized Head Meta Tags, just in case {{my.DEV Comment Close}}
+  {{my.DEV Universal Head Meta Tags}}
+  {{my.DEV Folder Head Meta Tags}}
+  {{my.DEV Content Head Meta Tags}}
+  {{my.DEV Comment Open}} / End of Tokenized Head Meta Tags -->
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Production Landing Page CSS -->
+  <link href="{{my.LP CSS}}" rel="stylesheet">
+  <!-- Font Awesome Icons CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Webfont CSS -->
+  <link rel="stylesheet" href="{{my.LP Webfont URL}}">
+
+  <style>
+    /*  Lets Template Control Form Button Text */
+    .mktoForm button[type="submit"]:after {  
+      content: "${buttonText}";  
+    }  
+    .mktoForm button[type="submit"][disabled]:after {    
+      content: "";    
+    } 
+
+    /*  Tokenizes Checkbox text - Here Permissions Text */
+    .mktoCheckboxList input + label:after {
+      content:'{{my.Form Permission Text}}' !important;
+    }
+
+    .HerosWrapper {
+      background: ${heroBgImgOverlay}url("${heroBgImg}");
+      -webkit-background-size: 100% 100%;
+      -moz-background-size: 100% 100%;
+      -o-background-size: 100% 100%;
+      background-size: 100% 100%;
+      background-size: cover;
+      background-position: center;
+      background-color: #808080;
+    }
+
+    body {
+      background-color: ${bodyBgColor};
+    }
+
+    .HerosWrapper {
+      display:${HerosWrapperIsDisplayed};
+    }
+    
+    .SubHero {
+      display:${SubHeroIsDisplayed};
+    }
+
+    .MainWrapper {
+      display:${MainWrapperIsDisplayed};
+    }
+
+    .Form__privacyLink {
+      display:${Form__privacyLinkIsDisplayed};
+    }
+
+    #framed-block {
+      display:${boolean4};
+    } 
+    
+    #custom-block {
+      display:${boolean5};
+    }
+    
+    .ClientInfoListWrapper {
+      display:${ClientInfoListWrapperIsDisplayed}
+    }
+
+    .SoMeIconsListWrapper {
+      display:${SoMeIconsListWrapperIsDisplayed};
+    }
+
+    .FooterWrapper {
+      display:${FooterWrapperIsDisplayed};
+    }
+
+  </style>
+
+  <title>{{my.LP Page Title}}</title>
+
+  <!-- Google Tag Manager Token {{my.DEV Comment Close}}
+  {{my.DEV Folder GTM JS}}
+  {{my.DEV Comment Open}} / End of Google Tag Manager Token-->
+
+    <!-- Tokenized Head CSS, just in case {{my.DEV Comment Close}}
+  {{my.DEV Universal Head CSS}}
+  {{my.DEV Folder Head CSS}}
+  {{my.DEV Content Head CSS}}
+  {{my.DEV Comment Open}} / End of Tokenized Head CSS-->
+
+  <!-- Tokenized Head JS, just in case {{my.DEV Comment Close}}
+  {{my.DEV Universal Head JS}}
+  {{my.DEV Folder Head JS}}
+  {{my.DEV Content Head JS}}
+  {{my.DEV Comment Open}} / End of Tokenized Head JS, just in case -->
+
+</head>
+<body>
+  
+    
+	<!-- Google Tag Manager No Script Token {{my.DEV Comment Close}}
+  
+	{{my.DEV Folder GTM no script}}
+	{{my.DEV Comment Open}} / End of Google Tag Manager No Script Token -->
+
+  <div class="content">
+
+    <!-- Navbar -->
+    <nav class="navbar static-top">
+      <div class="container">
+        <a class="navbar-brand" href="{{my.GEN Main Website URL}}" target="_blank">
+          <img class="LogoImg" src="{{my.LP Logo Image URL}}" alt="">
+        </a>
+      </div>
+    </nav> <!-- End of Navbar -->
+
+    <!-- Sections Order (All sections inside this div can be vertically ordered if a variable is created per section and class (including the variable) is appended to sections container-fluid)-->
+    <div class="d-flex flex-wrap"> 
+
+      <!-- HerosWrapper -->
+      <div class="HerosWrapper container-fluid order-${HerosWrapperPosNr}">
+        <div class="container">
+          <div class="row">
+
+            <!-- Hero -->
+            <div class="Hero Hero--changePadding col-md-6 order-${HeroPosNr} mktoText" id="mktoHook-Hero" mktoName="Hero">
+              <p class="Hero__category">{{my.CON Category}}</p>
+              <h1 class="Hero__heading">{{my.CON Name}}</h1>
+              <p class="Hero__subHeading">{{my.CON Subheader}}</p>
+            </div><!-- /Hero -->             
+
+            <!-- SubHero -->
+            <div class="SubHero col-md-6 align-self-center order-${SubHeroPosNr}">
+              <img src="{{my.CON Sub Hero Image Url}}" class="img-fluid">   
+            </div><!-- /SubHero -->
+
+          </div><!-- /row -->
+        </div><!-- /container -->
+      </div><!-- /HerosWrapper -->
+
+      <!-- MainWrapper -->
+      <div class="MainWrapper container-fluid order-${MainWrapperPosNr}" >
+        <div class="container">
+          <div class="row">
+            
+            <!-- MainContent -->
+            <div class="MainContent col-md-7 mktoText" id="mktoHook-MainContent" mktoName="MainContent">
+              <h2 class="MainContent__heading">{{my.CON Main Content Heading}}</h2>
+              <div class="MainContent__body">{{my.CON Main Content Body}}</div>
+            </div><!-- /MainContent -->
+            
+            
+            <div class="col-md-5">
+              <!-- Form -->
+              <div class="Form Form--changeMargin">
+                <div class="Form__preTextWrp mktoText" id="mktoHook-Form__preTextWrp" mktoName="Form__preTextWrp">
+                  <h4 class="Form__heading">{{my.CON Form Heading}}</h4>
+                  <p class="Form__subHeading">{{my.CON Form Sub Heading}}</p>
+                </div><!-- /Form__preTextWrp -->  
+                <div class="Form__mktoForm mktoForm" id="mktoHook-Form__mktoForm" mktoName="Form__mktoForm">
+                  <!-- Embedded Marketo Form Here -->
+                </div> 
+                <div class="Form__subTextWrp mktoText" id="mktoHook-Form__subTextWrp" mktoName="Form__subTextWrp">
+                  <a class="Form__privacyLink" href="{{my.LP Form Privacy Link}}" target="_blank">
+                    {{my.LP Form Privacy Link Text}}
+                  </a>
+                </div><!-- /Form__subTextWrp --> 
+              </div><!-- /Form --> 
+            </div> 
+
+          </div><!-- /row -->
+        </div><!-- /container -->
+      </div> <!-- MainWrapper -->
+
+      <!-- Framed Block -->
+      <div class="container-fluid order-${framedBlockPosNr}" id="framed-block">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="mktoText" id="framedBlockText1" mktoName="Framed Block Text 1">
+                <p class="lead">Thank you for downloading our {{my.CON Category}} {{my.CON Name}}</p>
+                <h1>We have sent you an e-mail with a download link</h1>
+                <p class="lead"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End of Framed Block -->  
+
+      <!-- Custom Block -->
+      <div class="container-fluid order-${customBlockPosNr}" id="custom-block">
+        <div class="container">
+          <div class="row">
+            <div class="mktoText" id="customBlockHTML" mktoName="Custom Block HTML">
+              <div class="col-12">
+              <p class="lead">Custom Block Preheader Text</p>
+              <h1>Customer Block Header Text</h1>
+              <p>Customer Block Paragraph Text</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End of Custom Block -->  
+
+    </div> <!-- End of Sections Order -->
+
+  </div>   <!-- End of content -->
+
+  <!-- FooterWrapper -->
+  <footer class="FooterWrapper">
+    <div class="mktoSnippet" id="mktoHook-footerSnippet" mktoName="Footer Snippet"></div>	
+  </footer><!-- /FooterWrapper -->
+
+  <!-- Marketo Form JavaScript -->
+  <script> 
+  MktoForms2.whenReady(function(form) {  
+
+    //Removes any querystring in the URL before logging Latest Form URL
+    {{my.LP Latest Form URL Script}}
+
+    //Rewrites follow up URL so it uses same domain as form page
+    {{my.LP Rewrite follow up URL}}    
+    });
+
+  </script>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <!-- Tokenized Foot JS, just in case {{my.DEV Comment Close}}
+  {{my.DEV Universal Foot JS}}
+  {{my.DEV Folder Foot JS}}
+  {{my.DEV Content Foot JS}}
+  {{my.DEV Comment Open}} / End of Tokenized Foot JS, just in case -->
+
+  <script>
+    // hide empty client info list item(s)
+    $( "#jsHook-ClientInfoList > li" ).each(function () {
+      if ( jQuery.trim(this.innerText)  == '' ) { 		
+        $( this ).addClass( "d-none" );
+      }	  
+    });
+
+    // hide empty SoMe icon list item(s)
+    $( "#jsHook-SoMeIconsList > li" ).has( "a[href*='<!--']" ).addClass( "d-none" );
+  </script>
+
+</body>
+</html>
